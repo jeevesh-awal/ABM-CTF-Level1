@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6: Hidden in the Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .challenge-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .challenge-box h2 {
+            margin-bottom: 20px;
+        }
+        .challenge-box p {
+            margin-bottom: 20px;
+        }
+        .challenge-box img {
+            max-width: 300px;
+            height: auto; 
+            border-radius: 5px;
+        }
+        .challenge-box a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+        .challenge-box a:hover {
+            text-decoration: underline;
+        }
+        .challenge-box button {
+            background-color: #FFA500;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .challenge-box button:hover {
+            background-color: #cc8400;
+        }
+    </style>
+</head>
+<body>
+    <div class="challenge-box">
+        <h2>Challenge 6: Hidden in the Image</h2>
+        <p>Download the image below and use steganography tools to extract the hidden flag.</p>
+        <img src="challenge_image.jpg" alt="Steganography Challenge Image">
+        <p><a href="challenge_image.jpg" download>Download the Image</a></p>
+        <div class="return-home">
+            <a href="home.html">
+                <button>Return Home</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

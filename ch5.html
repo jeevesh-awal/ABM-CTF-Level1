@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 5: JavaScript Unlock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .challenge-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .challenge-box h2 {
+            margin-bottom: 20px;
+        }
+        .challenge-box input {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .challenge-box button {
+            background-color: #FFA500;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+        }
+        .challenge-box button:hover {
+            background-color: #cc8400;
+        }
+        .challenge-box #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="challenge-box">
+        <h2>Challenge 5: JavaScript Unlock</h2>
+        <p>Enter the secret code to unlock the box and reveal the flag.</p>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="unlockBox()">Unlock</button>
+        <div id="result"></div>
+        <div class="return-home">
+            <a href="home.html">
+                <button>Return Home</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const secretCode = "CTF_JS_MASTER";
+
+        function unlockBox() {
+            const userInput = document.getElementById("codeInput").value;
+            const resultDiv = document.getElementById("result");
+
+            if (userInput === secretCode) {
+                resultDiv.textContent = "Flag: ABM{javascript_is_fun}";
+                resultDiv.style.color = "#00ff00"; 
+            } else {
+                resultDiv.textContent = "Incorrect code. Try again!";
+                resultDiv.style.color = "#ff0000"; 
+            }
+        }
+    </script>
+</body>
+</html>
